@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 
 # Load the XML file
-tree = ET.parse('a.xml')
+tree = ET.parse('fileneedtobechanged.xml')
 root = tree.getroot()
 
 # Iterate through each <paymentItem> element
@@ -20,4 +20,4 @@ for payment_item in root.findall('.//paymentItem'):
         payment_item.insert(list(payment_item).index(completed_quantity_element), original_quantity_element)
 
 # Save the updated XML file
-tree.write('PA_01072023_123023.xml')
+tree.write('example.xml')
